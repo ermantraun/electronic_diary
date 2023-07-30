@@ -1,0 +1,2 @@
+def dell(data):
+    pass

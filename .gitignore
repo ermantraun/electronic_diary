@@ -64,10 +64,10 @@ db.sqlite3-journal
 # Flask stuff:
 instance/
 .webassets-cache
-
+.*
 # Scrapy stuff:
 .scrapy
-
+*config.json
 # Sphinx documentation
 docs/_build/
 

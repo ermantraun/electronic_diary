@@ -1,0 +1,2 @@
+def upd(data):
+    pass
