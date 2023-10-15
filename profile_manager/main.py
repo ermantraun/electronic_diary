@@ -4,6 +4,7 @@ from operations import all_operations
 from contextlib import ExitStack
 request_body = """{
   "operation": "add",
+  "data_type": "students",
   "data": {
     "classes": null,
     "name": "Andrew",
@@ -21,9 +22,10 @@ def parse_config(config_file_name):
 def profileServiceHandler(request_body, db_config):
     request_body = json.loads(request_body)
     data = request_body['data']
+    data_type = request_body['data_type']
     operation = request_body['operation']
     if operation in all_operations:
-        response = all_operations[operation](data, db_config)
+        response = all_operations[operation](data, data_type, db_config)
     else:
         response = 'HTTP/1.1 SERVICE_ERROR: No such operation'
     return response

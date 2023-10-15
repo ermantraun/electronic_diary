@@ -1,7 +1,5 @@
 import socket
-import json
 from . import excepts
-
 
 def _parsing_http(http):
     http = http.split('\n\n')
